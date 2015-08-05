@@ -1,0 +1,73 @@
+[
+ ;; Person
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/shared-id
+  :db/valueType          :db.type/uuid
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/value
+  :db/doc                "The UUID of the person created by the data management tool"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/first-name
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The first name of the person"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/middle-name
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The middle name of the person"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/last-name
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The last name of the person"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/language
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The person's preferred language (TODO: there is only one language, so it's preferred by default - can change if we have a list to support)"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/gender
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "A person's gender"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :person.gender/female}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :person.gender/male}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/birth-date
+  :db/valueType          :db.type/instant
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The birth date of the person (date only, no need for time) ... Maybe we can normalise this with a function!?"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/nationality
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The nationality of the person"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :person/contacts
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/many
+  :db/doc                "List of contact points"
+  :db.install/_attribute :db.part/db}
+
+ ]

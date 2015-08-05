@@ -1,0 +1,152 @@
+[
+ ;; Contact methods
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :contact/channel
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "A channel through which we can contact the person"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.channel/postal}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.channel/email}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.channel/telephone}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.channel/social-network}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :contact/mode
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "Mode of address (personal or business)"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.mode/personal}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :contact.mode/business}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :contact/consent
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "Whether the contact point can be used"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :contact/preferred
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "Whether this contact point is preferred"
+  :db.install/_attribute :db.part/db}
+
+ ;; Postal Addresses
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/line1
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/line2
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/line3
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/locality
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/region
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/code
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :postal/country
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :email/address
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :telephone/country-code
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :telephone/number
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :social-network/name
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/facebook}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/twitter}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/linkedin}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/googleplus}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/pinterest}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/instagram}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/whatsapp}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/snapchat}
+
+ {:db/id    #db/id[:db.part/user]
+  :db/ident :social-network.name/lime}
+
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :social-network/username
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ ]

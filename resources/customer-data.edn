@@ -1,0 +1,61 @@
+[;; A customer
+ {:db/id            #db/id [:db.part/user -1]
+  :person/shared-id #uuid "d213198b-36b5-4c19-8cb1-e172f59091d9"
+  :person/first-name "Ray"
+  :person/middle-name "Mond"
+  :person/last-name "McDermott"
+  :person/language "EN"
+  :person/gender :person.gender/male
+  :person/birth-date #inst "1962-01-23"
+  :person/nationality "British"
+  }
+
+ ;; email
+ {:db/id            #db/id [:db.part/user -3]
+  :contact/channel :contact.channel/email
+  :contact/mode :contact.mode/personal
+  :contact/consent true
+  :contact/preferred true
+  :email/address "person@foomail.com"
+  :person/_contacts #db/id [:db.part/user -1]
+  }
+
+ ;; phone
+ {:db/id            #db/id [:db.part/user -4]
+  :contact/channel :contact.channel/telephone
+  :contact/mode :contact.mode/personal
+  :contact/consent false
+  :contact/preferred false
+  :telephone/country-code "32"
+  :telephone/number "827-1678"
+  :person/_contacts #db/id [:db.part/user -1]
+  }
+
+ ;; social
+ {:db/id            #db/id [:db.part/user -5]
+  :contact/channel :contact.channel/social-network
+  :contact/mode :contact.mode/personal
+  :contact/consent true
+  :contact/preferred true
+  :social-network/name :social-network.name/facebook
+  :social-network/username "mondoman"
+  :person/_contacts #db/id [:db.part/user -1]
+  }
+
+ ;; postal
+ {:db/id            #db/id [:db.part/user -6]
+  :contact/channel :contact.channel/postal
+  :contact/mode :contact.mode/personal
+  :contact/consent true
+  :contact/preferred false
+  :postal/line1 "First Line"
+  :postal/line2 "Second Line"
+  :postal/line3 "Third Line"
+  :postal/locality "Locals"
+  :postal/region "Reeg"
+  :postal/code "8090"
+  :postal/country "Zaire"
+  :person/_contacts #db/id [:db.part/user -1]
+  }
+
+ ]

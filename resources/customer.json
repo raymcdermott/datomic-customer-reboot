@@ -1,0 +1,81 @@
+{
+    "firstName": "Christopher",
+    "middleName": null,
+    "lastName": "Smith",
+    "gender": "male",
+    "birthDate": "25/04/1980",
+    "nationality": "BRITISH",
+    "contactPoint": {
+        "address": [
+            {
+                "contactType": "WORK",
+                "languageCode": "EN",
+                "verified": true,
+                "consentToContact": false,
+                "preferredContactMethod": false,
+                "addressLine1": "60 Avenue du Bourget",
+                "addressLine2": "Bourgetlaan 60",
+                "addressLine3": null,
+                "addressLocality": null,
+                "addressRegion": "Brussels",
+                "postalCode": "1140",
+                "country": "Belgium"
+            },
+            {
+                "contactType": "HOME",
+                "languageCode": "EN",
+                "consentToContact": true,
+                "preferredContactMethod": false,
+                "addressLine1": "60 Avenue du Bourget",
+                "addressLine2": "Bourgetlaan 60",
+                "addressLine3": null,
+                "addressLocality": null,
+                "addressRegion": "Brussels",
+                "postalCode": "1140",
+                "country": "Belgium"
+            }
+        ],
+        "email": [
+            {
+                "contactType": "WORK",
+                "languageCode": "EN",
+                "consentToContact": false,
+                "preferredContactMethod": false,
+                "email": "christopher.smith@somecompany.com"
+            },
+            {
+                "contactType": "PERSONAL",
+                "languageCode": "EN",
+                "consentToContact": true,
+                "preferredContactMethod": true,
+                "email": "cscasd32e@gmail.com"
+            }
+
+        ],
+        "telephone": [
+            {
+                "contactType": "WORK",
+                "languageCode": "EN",
+                "consentToContact": true,
+                "preferredContactMethod": false,
+                "countryCode": "0044",
+                "telephoneNumber": "01162689567"
+            }
+        ],
+        "socialMedia": [
+            {
+                "contactType": "PERSONAL",
+                "languageCode": "EN",
+                "consentToContact": false,
+                "preferredContactMethod": false,
+                "socialMedia": "FACEBOOK",
+                "userName": "csmithy"
+            }
+
+        ]
+    },
+    "toyotaRelationship": {
+        "engagementRating":4,
+        "customerRating": "Priority",
+    }
+}
