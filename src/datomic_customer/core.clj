@@ -24,6 +24,15 @@
 
 (defn results [](d/q '[:find ?c :where [?c :person/first-name]] (db conn)))
 
+; get eid from results ... this is WRONG
+(def eid (first (results)))
+
+; get historic txn data for this eid ...
+(d/q '[:find [(pull ?t [*]) ...] :in $ ?e :where
+       [?e _ _ ?t]]
+     db
+     eid)
+
 (clojure.pprint/pprint results)
 
 ;

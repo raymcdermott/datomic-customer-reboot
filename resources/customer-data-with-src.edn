@@ -1,13 +1,19 @@
 [;; A customer
  {:db/id            #db/id [:db.part/user -1]
-  :person/shared-id #uuid "d213198b-36b5-4c19-8cb1-e172f59091d9"
+  :person/shared-id #uuid "d52607d6-3f62-4664-8bc8-49d8b59f2c73"
   :person/first-name "Ray"
   :person/middle-name "Mond"
-  :person/last-name "McDermott"¡
+  :person/last-name "McDermott"
   :person/language "EN"
   :person/gender :person.gender/male
   :person/birth-date #inst "1962-01-23"
   :person/nationality "British"
+  }
+
+ ;; Source of this data will be associated with the txn
+ {
+  :db/id            #db/id [:db.part/tx -1]
+  :data/src "A random place on the Internet, spooky heh?"
   }
 
  ;; email

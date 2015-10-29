@@ -1,0 +1,9 @@
+[
+ ;; Contact methods
+ {:db/id                 #db/id[:db.part/db]
+  :db/ident              :data/src
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/doc                "The provenance of the data on this transaction"
+  :db.install/_attribute :db.part/db}
+ ]
